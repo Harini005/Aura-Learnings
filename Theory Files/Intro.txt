@@ -1,0 +1,112 @@
+What is Salesforce Lightning :
+==============================
+
+=> Lightning includes Lightning Component Framework
+=> One can build responsive applications for any device.
+=> Lighntning improves app performance.
+=> Once can develop components those can be reused by other developers and admins for Communities, Lightning Experience and salesforce Mobile App.
+=> Lightning App builder empowers admins to build Lightning pages visually without using codes but need to make lightning components available in the Lightning App Builder.
+
+Why Use Aura Components Programming Model?
+===========================================
+
+=> Out of the Box Components
+=> Event-Driven Architecture
+=> A Framework optimized for performance.
+=> Rich Component EcoSystem.
+=> Fast Development
+=> Device aware and cross Browser Compatibility.
+
+Aura Components :
+===================
+=> Self contained and reusable units of app.
+=> Framework includes a set of prebuilt components.
+=> Components that come with Lightning Design System styling are available in lightning namespace.
+=> can combine or configure components to form new components in app.
+=> component can contain other components, as well as HTML , CSS, JS or any other web enabled code.
+
+| Lightning                                                   | VisualForce                     |
+| ----------------------------------------------------------- | ------------------------------- |
+| client Side UI Generation                                   | Server side UI Geneartion       |
+| Api Centric Model                                           | Page Centric Model              |
+| Component Based Framework                                   | MVC Framework                   |
+| Javascript framework                                        | Tag Based framework             |
+| Designed for Lightning Experience and salesforce mobile App | Designed for salesforce classic |
+|                                                             |                                 |
+
+Events :
+========
+
+=> Event Driven programming is also used in Javascript and java swing
+=> We need to write handles that respond to interface events as they occur.
+=> There are two types of Event in framework :
+    -> Component Events : Can only be handled by components above them in the containment hierarchy, such as the component itself or a component that instantiates or contains the component. Salesforce recommends using component events instead of application events because they are more localized to the components that need to know about them. Component events can only be registered in child components and handled by parent components. 
+    -> Application Event : Are handled by all components that are listening to the event. They are best used for something that should be handled at the application level, such as navigating to a specific record. Application events allow communication between components that are in separate parts of the application and have no direct containment relationship. 
+
+
+
+
+Lightning Components and Aura :
+===============================
+-> Lightning component:
+   ---------------------- 
+    => Build on top of Aura.
+    => Saleforce specific extensions.
+
+-> Aura :
+ -------------
+    => Open source Framework.
+    => Think of it as a webkit in safari and chrome
+    => Enterprise ready and tested.
+
+
+Lightning Component Bundle:
+===========================
+client :(Application/Component)
+********
+Style (CSS)
+Renderer
+controller(Javascript)
+Helper(Javascript)
+
+Design 
+SVG
+Documentation
+
+Server:
+********
+Apex controller
+Database
+
+-> To view the component we need Application
+
+| Resource                 | Resource Name            | Usage                                                                                     |
+| ------------------------ | ------------------------ | ----------------------------------------------------------------------------------------- |
+| Component or Application | Sample.cmp or sample.app | The only requird resource in a bundle. Contains markup for the comp                       |
+|                          |                          | or app. Each bundle contains only one component or app resource.                          |
+| CSS Styles               | Sample.css               | Styles for components                                                                     |
+| Controller               | sampleController.js      | client-side controller methods to handle events in the component.                         |
+| Design                   | Sample.design            | Required for components used in the Lightning App Builder or Lightning Pages              |
+| Helper                   | sampleHelper.js          | Javascript functions that can be called from any javascript code in a component's bundle. |
+| Documentation            | sample.auradoc           | A description, sample code, and one or multipe references to components.                  |
+| Renderer                 | sampleRender.js          | CLient-side rendere to override default rendering for a component.                        |
+| SVG                      | sample.svg               | Custom icon resource for components used in the lightning App Builder.                    |
+|                          |                          |                                                                                           |
+
+SVG - scalable vector graphics
+
+What is a component:
+===================
+
+A component is a bundle that includes a definition resource, Written in markup, and may include additional , optional resources like controller , stylesheet and so on.
+
+What is Application :
+=====================
+=> An app is a special kind of Component.
+=> can think of an app as being different from a component in only two meaningul ways:
+    -> AN app uses <aura:application> tag instead of <aura:component> tag.
+    -> Only an app has a preview button in the developer console.
+
+=> if an app is changed it renders automatically.
+=> if components changed then the data in the preview won't be rendere.
+

@@ -1,0 +1,1 @@
+To have the slds applied to the components use Tag <aura:application extends="force:slds"> in application. For components by default it will be applied.
