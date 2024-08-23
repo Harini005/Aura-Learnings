@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction" access="global">
+    <aura:attribute name="message" type="String" default="Hello from HTML"></aura:attribute>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    
+    <p>Message : {!v.message}</p>
+    
+    <lightning:button label="Click Me" onclick="{!c.buttonHandler}"></lightning:button>
+        <lightning:button label="Another Click Me" onclick="{!c.buttonHandler}"></lightning:button>
+     <lightning:button label="Reset" onclick="{!c.buttonHandler}"></lightning:button>
+    
+    
+	
+</aura:component>

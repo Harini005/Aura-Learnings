@@ -1,1 +1,13 @@
 To have the slds applied to the components use Tag <aura:application extends="force:slds"> in application. For components by default it will be applied.
+while creating component the check box to check. those are same aas targets in LWC
+after creating component these will be visible on component tag.
+<aura:component implements="force:hasRecordId,
+                            force:appHostable,
+                            forceCommunity:availableForAllPageTypes,
+                            flexipage:availabeForAllPageTypes , 
+                            flexipage:availableForRecordHome, 
+                            force:lightningQuickAction" access="global"> </aura:component>
+
+
+Attributes and expressions :
+===========================

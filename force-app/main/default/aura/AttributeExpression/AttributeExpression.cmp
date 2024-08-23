@@ -1,0 +1,20 @@
+<aura:component
+    implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,force:hasRecordId,flexipage:availableForRecordHome">
+
+    <!-- attributes -->
+    <aura:attribute name="Age" type="Integer" default="18"></aura:attribute>
+    <aura:attribute name="account" type="Account"></aura:attribute>
+
+
+    <!-- handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+
+
+    <!--content on Screen-->
+    <p>Age Selected is : {!v.Age}</p>
+    <br />
+    <p>Account Name : {!v.account.name}</p>
+    <p>Account Industry : {!v.account.Industry}</p>
+
+
+</aura:component>
