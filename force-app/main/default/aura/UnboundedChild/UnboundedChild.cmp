@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllpageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction">
+    <aura:attribute name="childVar" type="String" ></aura:attribute>
+    
+    Child Value : {!v.childVar}
+    
+    <br></br>
+    
+    <lightning:button label="Update Child" onclick="{!c.updateChild}"></lightning:button>
+	
+</aura:component>

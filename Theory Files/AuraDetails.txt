@@ -11,3 +11,44 @@ after creating component these will be visible on component tag.
 
 Attributes and expressions :
 ===========================
+variables in Aura is declared as 
+<aura:attribute name="var1" type="String" default="test" access="private">
+default is optional 
+access is optional
+
+To access variables in HTML:
+{!v.var1} 
+
+To access variable in Controller(JS) :
+component.get("v.var1");
+
+To set the variable value in Controller (Js) :
+component.set("v.var1" , "Value");
+
+
+How to handle actions :
+=======================
+Ex : A lightning button it is same as in LWC
+Html :
+<lightning:button label="Click Me" onclick={!c.buttonHandler}>
+
+Js :
+({
+    buttonHandler : function(component , event , helper){
+        var buttonName = event.getSource().get("v.label");
+    }
+})
+
+
+Unbounded Expression :
+======================
+=> Data Binding between components :
+    -> we can add a component in mark up  of another comoponent (also known as container component).
+    -> we use an expression to initialize attribute values in the component based on attribute values of the container component. 
+    -> There are two form of expression syntax, which exhibit different behaviours for data binding between the components.
+
+=> Two ways of Data Bindings :
+    -> unbounded Expression : changes to the parent attribute won't affect anything in child and vice versa.
+        syntax : {#expression}
+    ->Bounded expression :
+        syntax : {!expression}
