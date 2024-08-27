@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,flexipage:availableForRecordHome,force:lightningQuickAction">
+	<aura:attribute name="childVar" type="String"></aura:attribute>
+    <aura:handler name="change" value="{!v.childVar}" action="{!c.onChangeUpdateChild}"></aura:handler>
+    Child Var  : {!v.childVar}
+
+	<br></br>
+ 	<lightning:button label="Click" onclick="{!c.updateChild}"></lightning:button>
+    
+</aura:component>

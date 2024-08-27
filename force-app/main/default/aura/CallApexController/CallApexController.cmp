@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" Controller="AccountController">
+    <aura:attribute name="accList" type="List"></aura:attribute>
+    <aura:attribute name="options" type="List"></aura:attribute>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    <lightning:button label="Get Accounts" onclick="{!c.doInit}"></lightning:button>
+    <lightning:combobox label="Select an Account" options="{!v.options}" value="{!v.accList.Id}"></lightning:combobox>
+</aura:component>

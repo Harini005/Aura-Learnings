@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="parentVar" type="String" default="Parent Variable"> </aura:attribute>
+    <aura:handler name="change" value="{!v.parentVar}" action="{!c.onParentValueChange}"></aura:handler>
+    Parent Value : {!v.parentVar}
+    <br/>
+    <lightning:button label="Click" onclick="{!c.updateParent}"></lightning:button>
+    <hr></hr>
+    
+    <c:BoundedExpressionChild childVar="{!v.parentVar}"></c:BoundedExpressionChild>
+</aura:component>

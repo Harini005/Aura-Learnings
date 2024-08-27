@@ -49,6 +49,20 @@ Unbounded Expression :
 
 => Two ways of Data Bindings :
     -> unbounded Expression : changes to the parent attribute won't affect anything in child and vice versa.
+    Component : UnBoundedParent
+                UnBoundedChild
         syntax : {#expression}
-    ->Bounded expression :
+    ->Bounded expression : changes to the parent effects child and vice versa.
         syntax : {!expression}
+        component : BoundedExpressionParent
+                    BoundedExpressionChild
+
+
+
+Call Apex from Aura :
+=====================
+-> To call an Apex from aura in the <aura:component> tag add controller="ClassName"
+-> In js/component add var action = component.set("c.methodName")
+-> then invoke the Action with $A.enqueueAction(action);
+
+component : CallApexController
