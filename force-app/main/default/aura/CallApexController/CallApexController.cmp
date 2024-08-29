@@ -2,6 +2,7 @@
     <aura:attribute name="accList" type="List"></aura:attribute>
     <aura:attribute name="options" type="List"></aura:attribute>
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
-    <lightning:button label="Get Accounts" onclick="{!c.doInit}"></lightning:button>
-    <lightning:combobox label="Select an Account" options="{!v.options}" value="{!v.accList.Id}"></lightning:combobox>
+    <lightning:card class="slds-p-around_medium">
+    		<lightning:combobox label="Select an Account" options="{!v.options}" value="{!v.accList.Id}"></lightning:combobox>
+    </lightning:card>
 </aura:component>

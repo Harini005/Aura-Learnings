@@ -1,6 +1,10 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction,flexipage:availableForRecordHome">
     <aura:attribute name="parentVar" type="String" default="Parent Variable"></aura:attribute>
     <c:UnboundedChild childVar="{#v.parentVar}"></c:UnboundedChild>
+    <hr/>
+    
+    <!-- bounded Expression-->
+    <c:UnboundedChild childVar="{!v.parentVar}"></c:UnboundedChild>
     
     <hr></hr>
     

@@ -1,0 +1,10 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome" access="global" controller="ContactController">
+    <aura:attribute name="contacts" type="Contact[]"></aura:attribute>
+    <aura:attribute name="options" type="List"></aura:attribute>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    <lightning:card title="Account Related Contacts">
+    	<lightning:combobox label="Choose Contact" options="{!v.options}"></lightning:combobox>
+    </lightning:card>
+	
+</aura:component>
